@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Atividades</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" type="imagex/png" href="./img/icon.png">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>Gerenciador de Atividades</h1>
+        </header>
+
+        <section class="adicionar-atividade">
+            <h2>Adicionar Atividade</h2>
+            <input type="text" id="titulo" placeholder="Título da Atividade" class="campo-input">
+            <select id="disciplina" class="campo-input">
+                <option value="Algoritmos">Algoritmos</option>
+                <option value="Banco de Dados">Banco de Dados</option>
+                <option value="Arquitetura e Organização de Computadores">Arquitetura e Organização de Computadores</option>
+                <option value="Análise e Projeto de Software">Análise e Projeto de Software</option>
+                <option value="Cálculo Diferencial e Integral 1">Cálculo Diferencial e Integral 1</option>
+            </select>
+            <input type="date" id="data" class="campo-input">
+            <button onclick="adicionarAtividade()" class="addAtv">Adicionar Atividade</button>
+        </section>
+
+        <hr>
+
+        <section class="filtro-atividade">
+            <h2>Filtrar Atividades</h2>
+            <input type="text" id="filtroTitulo" placeholder="Filtrar por título" oninput="filtrarAtividades()" class="campo-input">
+            <select id="filtroDisciplina" onchange="filtrarAtividades()" class="campo-input">
+                <option value="">Todas as Matérias</option>
+                <option value="Algoritmos">Algoritmos</option>
+                <option value="Banco de Dados">Banco de Dados</option>
+                <option value="Arquitetura e Organização de Computadores">Arquitetura e Organização de Computadores</option>
+                <option value="Análise e Projeto de Software">Análise e Projeto de Software</option>
+                <option value="Cálculo Diferencial e Integral 1">Cálculo Diferencial e Integral 1</option>
+            </select>
+            <input type="date" id="filtroDataInicio" onchange="filtrarAtividades()" class="campo-input">
+            <input type="date" id="filtroDataFim" onchange="filtrarAtividades()" class="campo-input">
+            <button onclick="limparFiltros()" class="clearFilter">Limpar Filtros</button>
+        </section>
+
+        <hr>
+
+        <section class="lista-atividades">
+            <h2>Atividades Pendentes</h2>
+            <div id="listaAtividades"></div>
+
+            <hr>
+
+            <h2>Atividades Finalizadas</h2>
+            <div id="listaFinalizadas"></div>
+        </section>
+
+        <button onclick="limparDados()" class="limparDados">Limpar Todos os Dados</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
