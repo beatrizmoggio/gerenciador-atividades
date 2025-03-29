@@ -1,0 +1,217 @@
+body {
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(162, 162, 162);
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+.content {
+    width: 90%;  /* Ajustado para 90% da largura da tela */
+    max-width: 600px; /* Limita a largura máxima em 600px */
+    margin: auto; /* Margem no topo e no fundo */
+    padding: 40px 20px;  /* Ajuste do padding para melhorar o espaçamento */
+    background-color: rgba(255, 255, 255, 0.9); /* Leve transparência */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+}
+
+input,
+select,
+button {
+    width: 100%;
+    display: block;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+button:hover {
+    border-color: #0d3c7c;
+    outline: none;
+    box-shadow: 0 0 10px rgba(13, 60, 124, 0.5); /* Efeito de foco */
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 15px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0d3c7c;
+    transform: scale(1.05); /* Efeito de transformação */
+}
+
+.addAtv,
+.clearFilter {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #0d3c7c; /* Cor azul alterada */
+}
+
+.atividade {
+    font-size: 18px;
+}
+
+.listaFinalizadas {
+    padding: 50px;
+}
+
+.finalizada {
+    height: 80px;
+    text-decoration: line-through;
+}
+
+.algoritmos,
+.bancoDados,
+.arquitetura,
+.aps,
+.calculo {
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 15px 10px 0 15px;
+    transition: all 0.3s ease;
+}
+
+.algoritmos {
+    background-color: rgba(233, 233, 106, 0.2);
+}
+
+.bancoDados {
+    background-color: rgba(80, 190, 80, 0.2);
+}
+
+.arquitetura {
+    background-color: rgba(142, 63, 142, 0.2);
+}
+
+.aps {
+    background-color: rgba(0, 0, 246, 0.2);
+}
+
+.calculo {
+    background-color: rgba(0, 246, 217, 0.2);
+}
+
+.atividade .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.atividade .buttons button {
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+}
+
+.btnConcluir {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(80, 155, 80, 0.5);
+}
+
+.btnEditar {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(233, 233, 71, 0.5);
+}
+
+.btnRemover {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(229, 63, 63, 0.5);
+}
+
+.limparDados {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(189, 0, 0, 0.8);
+}
+
+/* Adicionando efeito de borda animada nos campos de entrada */
+input, select {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #0d3c7c;
+    box-shadow: 0 0 10px rgba(13, 60, 124, 0.6);
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px 15px;
+    }
+
+    input,
+    select,
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .algoritmos,
+    .bancoDados,
+    .arquitetura,
+    .aps,
+    .calculo {
+        padding: 12px 10px 0 12px;
+    }
+
+    .atividade .buttons {
+        flex-direction: column; /* Organiza os botões em coluna */
+    }
+
+    .atividade .buttons button {
+        width: 100%;  /* Faz os botões ocuparem toda a largura */
+        margin: 8px 0px 8px 0px; /* Adiciona margem entre os botões */
+    }
+}
+
+/* Media Query para telas menores que 480px */
+@media (max-width: 480px) {
+    h1,
+    h2 {
+        font-size: 20px; /* Reduz o tamanho das fontes nos títulos */
+    }
+
+    input,
+    select,
+    button {
+        font-size: 12px; /* Ajusta o tamanho da fonte dos inputs e botões */
+    }
+
+    .addAtv,
+    .clearFilter,
+    .limparDados {
+        font-size: 14px; /* Ajusta o tamanho da fonte dos botões */
+    }
+}
